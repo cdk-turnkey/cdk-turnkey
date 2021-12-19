@@ -12,3 +12,4 @@ The following are a mixture of general principles and principles that apply to s
 5. You cannot deploy an app to multiple regions in the same account. Global resources like CloudFront need collide on CDK-determined names. If you want to switch regions, you have to delete your stack from the region where you've already deployed.
 6. There is no local development. Develop the app by deploying it to a dev account.
 7. The app should deploy on every push once AWS credentials are added to GitHub Actions Secrets.
+8. The `scripts` property of `package.json` should present the public interface of the project. CI and local dev should interact with the project by calling `npm` scripts.
