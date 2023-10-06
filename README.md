@@ -13,3 +13,4 @@ The following are a mixture of general principles and principles that apply to s
 6. There is no local development. Develop the app by deploying it to a dev account.
 7. The app should deploy on every push once AWS credentials are added to GitHub Actions Secrets.
 8. The `scripts` property of `package.json` should present the public interface of the project. CI and local dev should interact with the project by calling `npm` scripts.
+9. A build should exercise your local dev workflow. **Document your local dev process through this build, not in a README**. Local dev processes change to frequently, and are too prone to being changed in a way that works for one but not for all, for them to be documented in the README or excluded from re-validation on every commit. Clunky, non-socialized, hard, variable local dev workflows destroy the time of developers. I want the worst developer to be able to run my project.
